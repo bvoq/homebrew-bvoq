@@ -30,21 +30,8 @@ class Psisolver < Formula
     bin.install "psi" => "psisolver"
   end
 
-  #test do
-  #  (testpath/"test.d").write <<~EOS
-  #    import std.stdio; void main() { writeln("Hello, world without explicit compilations!"); }
-  #  EOS
-
-  #  expected = <<~EOS
-  #    import std.stdio;
-  #    void main()
-  #    {
-  #        writeln("Hello, world without explicit compilations!");
-  #    }
-  #  EOS
-
-  #  system "#{bin}/dfmt", "-i", "test.d"
-
-  #  assert_equal expected, (testpath/"test.d").read
-  #end
+  test do
+    assert_equal "p(r) = 1/20·δ(1)[r]+1/20·δ(2)[r]+1/20·δ(3)[r]+1/20·δ(4)[r]+1/20·δ(5)[r]+1/20·δ(6)[r]+1/20·δ(7)[r]+13/20·δ(0)[r]", shell_output("#{bin}/psisolver test/transform.psi").strip
+    assert_equal "p(r) = δ(-3/4·log(3)·⅟log(2)+3)[r]", shell_output("#{bin}/psisolver --dp test/entropy.psi")
+  end
 end
