@@ -27,7 +27,7 @@ class Psisolver < Formula
 
   def install
     #target = OS.mac? ? "ldc" : "dmd"
-    "echo", "$pwd"
+    system "echo", "$pwd"
     "./dependencies-release.sh"
     "./build-release.sh"
     #system "make", target
