@@ -28,8 +28,8 @@ class Psisolver < Formula
   def install
     #target = OS.mac? ? "ldc" : "dmd"
     system "echo", "$pwd"
-    "./dependencies-release.sh"
-    "./build-release.sh"
+    system "./dependencies-release.sh"
+    system "./build-release.sh"
     #system "make", target
     #bin.install "bin/dfmt"
   end
