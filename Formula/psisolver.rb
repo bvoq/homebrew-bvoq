@@ -31,7 +31,15 @@ class Psisolver < Formula
   end
 
   test do
-    assert_equal "p(r) = 1/20·δ(1)[r]+1/20·δ(2)[r]+1/20·δ(3)[r]+1/20·δ(4)[r]+1/20·δ(5)[r]+1/20·δ(6)[r]+1/20·δ(7)[r]+13/20·δ(0)[r]", shell_output("#{bin}/psisolver test/transform.psi").strip
-    assert_equal "p(r) = δ(-3/4·log(3)·⅟log(2)+3)[r]", shell_output("#{bin}/psisolver --dp test/entropy.psi")
+    (testpath/"test.psi").write <<~EOS
+      def main(){
+        a := gauss(100,15);
+        b := gauss(100,15);
+        c := a > b;
+        return c;
+      }
+    EOS
+
+    assert_equal "p(c) = 1/2·δ(0)[c]+1/2·δ(1)[c]", shell_output("#{bin}/psisolver test.psi").strip
   end
 end
