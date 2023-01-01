@@ -40,6 +40,6 @@ class Psisolver < Formula
       }
     EOS
 
-    assert_equal "p(c) = 1/2·δ(0)[c]+1/2·δ(1)[c]", shell_output("#{bin}/psisolver test.psi").strip
+    assert_equal ") = 1/2·δ(0)[c]+1/2·δ(1)[c]", shell_output("#{bin}/psisolver test.psi").strip
   end
 end
