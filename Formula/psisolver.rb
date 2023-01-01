@@ -17,19 +17,19 @@ class Psisolver < Formula
     #sha256 cellar: :any_skip_relocation, x86_64_linux:   "852cdd41ee99f72be5b7e22af09e07a5da3457791016a78ec0038f3172c96120"
   end
 
-  #on_macos do
-  #  depends_on "ldc" => :build
-  #end
+  on_macos do
+    depends_on "ldc" => :build
+  end
 
-  #on_linux do
-  #  depends_on "dmd" => :build
-  #end
+  on_linux do
+    depends_on "dmd" => :build
+  end
 
   def install
     #target = OS.mac? ? "ldc" : "dmd"
-    system "echo", "$pwd"
-    system "bash", "dependencies-release.sh"
-    system "bash", "build-release.sh"
+    #system "bash", "dependencies-release.sh"
+    #system "bash", "build-release.sh"
+    system "ldc", "-release", "-inline", "-boundscheck=off", "-J.", "-Jlibrary", "*.d", "ast/*.d", "util/*.d", "-ofpsi"
     #system "make", target
     bin.install "psi" => "psisolver"
   end
