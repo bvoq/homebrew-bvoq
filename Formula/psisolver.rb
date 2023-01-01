@@ -28,10 +28,10 @@ class Psisolver < Formula
   def install
     #target = OS.mac? ? "ldc" : "dmd"
     system "echo", "$pwd"
-    system "./dependencies-release.sh"
-    system "./build-release.sh"
+    system "bash", "dependencies-release.sh"
+    system "bash", "build-release.sh"
     #system "make", target
-    #bin.install "bin/dfmt"
+    bin.install "psi" => "psisolver"
   end
 
   #test do
