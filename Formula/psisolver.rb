@@ -26,11 +26,7 @@ class Psisolver < Formula
   end
 
   def install
-    #target = OS.mac? ? "ldc" : "dmd"
-    #system "bash", "dependencies-release.sh"
-    #system "bash", "build-release.sh"
-    system "ldmd2", "-release", "-inline", "-boundscheck=off", "-J.", "-Jlibrary", "*.d", "ast/*.d", "util/*.d", "-ofpsi"
-    #system "make", target
+    system "bash", "build-release.sh"
     bin.install "psi" => "psisolver"
   end
 
