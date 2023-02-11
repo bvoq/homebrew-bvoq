@@ -7,7 +7,7 @@ class Psisolver < Formula
   license "BSL-1.0"
   head "https://github.com/eth-sri/psi.git", branch: "master"
 
-  depends_on "gnuplot"
+  depends_on "gnuplot" => :optional
 
   on_macos do
     depends_on "ldc" => :build
