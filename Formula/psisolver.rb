@@ -9,10 +9,12 @@ class Psisolver < Formula
 
   on_macos do
     depends_on "ldc" => :build
+    depends_on "gnuplot" => :build
   end
 
   on_linux do
     depends_on "dmd" => :build
+    depends_on "gnuplot" => :build
   end
 
   def install
