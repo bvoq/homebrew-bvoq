@@ -1,6 +1,7 @@
 class Psisolver < Formula
   desc "PSI Solver - Exact Inference for Probabilistic Programs"
   homepage "https://psisolver.org"
+  revision 0 # increment this if stable tag changed to recompile.
   version "1.0"
   url "https://github.com/eth-sri/psi.git",
       tag: "stable",
