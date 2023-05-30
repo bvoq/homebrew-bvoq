@@ -18,3 +18,8 @@ brew tap bvoq/bvoq
 brew install psisolver --HEAD
 ```
 
+Once installed, you can use it as follows:
+```
+psisolver <your_psi_file.psi>
+psisolver --help
+psisolver <your_psi_file.psi> --dp --cdf
