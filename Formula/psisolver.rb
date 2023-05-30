@@ -3,7 +3,7 @@ class Psisolver < Formula
   homepage "https://psisolver.org"
   version "1.0"
   url "https://github.com/eth-sri/psi.git",
-      tag: 
+      tag: "stable",
       revision: "1e9f1b2c27bf8071188f3449e29121e43d25ca25"
   license "BSL-1.0"
   head "https://github.com/eth-sri/psi.git", branch: "master"
