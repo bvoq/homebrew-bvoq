@@ -1,3 +1,4 @@
+# Installing psisolver using homebrew on macOS
 
 If you want to install the latest stable version of psisolver run:
  ```
