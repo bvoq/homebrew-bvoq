@@ -4,7 +4,7 @@ class Psisolver < Formula
   url "https://github.com/eth-sri/psi.git",
       tag:      "stable",
       revision: "1e9f1b2c27bf8071188f3449e29121e43d25ca25",
-      version:  1.0
+      version:  "1.0"
   license "BSL-1.0"
   head "https://github.com/eth-sri/psi.git", branch: "master"
 
