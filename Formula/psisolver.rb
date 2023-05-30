@@ -1,9 +1,10 @@
 class Psisolver < Formula
   desc "PSI Solver - Exact Inference for Probabilistic Programs"
   homepage "https://psisolver.org"
+  version "1.0"
   url "https://github.com/eth-sri/psi.git",
-      revision: "1e9f1b2c27bf8071188f3449e29121e43d25ca25",
-      version:  "1.0"
+      tag: 
+      revision: "1e9f1b2c27bf8071188f3449e29121e43d25ca25"
   license "BSL-1.0"
   head "https://github.com/eth-sri/psi.git", branch: "master"
 
