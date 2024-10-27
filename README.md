@@ -1,12 +1,12 @@
 # Installing psisolver using homebrew on macOS
 
-If you want to install the latest stable version of psisolver run:
+If you want to install the stable version of psisolver run:
  ```
  brew tap bvoq/bvoq
  brew install psisolver
  ```
 
-If you want to install the master branch add `--HEAD`:
+If you want to install the latest master branch add `--HEAD`:
 ```
 brew tap bvoq/bvoq
 brew install psisolver --HEAD
